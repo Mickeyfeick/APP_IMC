@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/colorPrimary"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnImgMaculino"
+                android:layout_width="144dp"
+                android:layout_height="142dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTint="@color/colorCard"
+                android:src="@drawable/male"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.912" />
+
+            <ImageButton
+                android:id="@+id/btnImgFemenino"
+                android:layout_width="144dp"
+                android:layout_height="142dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="@color/colorCard"
+                android:src="@drawable/female"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.913" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/colorCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Altura"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAltura"
+                    android:layout_width="91dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="114dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="183"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarAltura"
+                    app:layout_constraintEnd_toStartOf="@+id/textView5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="116dp"
+                    android:layout_marginBottom="56dp"
+                    android:text="cm"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarAltura"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvAltura"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAltura"
+                    android:layout_width="280dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:max="300"
+                    android:progress="183"
+                    android:progressBackgroundTint="#FFFFFF"
+                    android:secondaryProgressTint="#FFFFFF"
+                    android:soundEffectsEnabled="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAltura" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/colorCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Peso"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorText"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvPeso"
+                        android:layout_width="75dp"
+                        android:layout_height="49dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="3dp"
+                        android:text="74"
+                        android:textAlignment="textEnd"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="kg"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorText"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/tvPeso"
+                        app:layout_constraintStart_toEndOf="@+id/tvPeso" />
+
+                    <Button
+                        android:id="@+id/btn_menosPeso"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/btn_redondo"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="33dp"
+                        android:typeface="serif"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_masPeso"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPeso" />
+
+                    <Button
+                        android:id="@+id/btn_masPeso"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="28dp"
+                        android:background="@drawable/btn_redondo"
+                        android:text="+"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="33sp"
+                        android:typeface="serif"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/btn_menosPeso"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.54"
+                        app:layout_constraintStart_toEndOf="@+id/btn_menosPeso" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/colorCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Años"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorText"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvAnios"
+                        android:layout_width="76dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="3dp"
+                        android:text="19"
+                        android:textAlignment="textEnd"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <Button
+                        android:id="@+id/btn_edadMas"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@drawable/btn_redondo"
+                        android:text="+"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="33sp"
+                        android:typeface="serif"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/btn_edadMenos"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/btn_edadMenos" />
+
+                    <Button
+                        android:id="@+id/btn_edadMenos"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/btn_redondo"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="33sp"
+                        android:typeface="serif"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAnios"
+                        app:layout_constraintVertical_bias="0.544" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="483dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_calcular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
+            android:text="calcular tu IMC"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
