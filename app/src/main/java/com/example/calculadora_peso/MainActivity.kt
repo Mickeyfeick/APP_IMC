@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener{
@@ -70,15 +71,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
             }
             R.id.btnImgFemenino->sexo="F"
             R.id.btnImgMaculino->sexo="M"
-            R.id.btn_calcular->{
-                val imc = calculaIMC(peso,altura)
-                val intencion = Intent(this, Informacion::class.java)
-                intencion.putExtra("imc", imc)
-                intencion.putExtra("peso", peso)
-                intencion.putExtra("altura", altura)
-                intencion.putExtra("sexo", sexo)
-                intencion.putExtra("edad", edad)
-                startActivity(intencion)
+            R.id.btn_calcular -> {
+                if (sexo != "SIN") {
+                    val imc = calculaIMC(peso, altura)
+                    val intencion = Intent(this, Informacion::class.java)
+                    intencion.putExtra("imc", imc)
+                    intencion.putExtra("peso", peso)
+                    intencion.putExtra("altura", altura)
+                    intencion.putExtra("sexo", sexo)
+                    intencion.putExtra("edad", edad)
+                    startActivity(intencion)
+                } else {
+                    Toast.makeText(this, "Selecciona un genero", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
     }
