@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
             R.id.btnImgMaculino->sexo="M"
             R.id.btn_calcular -> {
                 if (sexo != "SIN") {
+
                     val imc = calculaIMC(peso, altura)
                     val intencion = Intent(this, Informacion::class.java)
                     intencion.putExtra("imc", imc)
